@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 export default function About() {
+  const [activeNode, setActiveNode] = useState('rrdcc');
   const aboutRef = useRef(null);
 
   useEffect(() => {
@@ -112,23 +113,219 @@ export default function About() {
         <div className="container">
           <div className="section-header slide-up">
             <h2>Organizational Structure</h2>
-            <p>WESVAARRDEC is governed by committees representing member agencies, supported by a secretariat based at West Visayas State University.</p>
+            <p>WESVAARRDEC is governed by collaborative committees representing member agencies, supported by a central secretariat at West Visayas State University.</p>
           </div>
 
-          <div className="grid-3">
-            <div className="vm-card slide-up" style={{ width: '100%', borderTopColor: 'var(--primary)' }}>
-              <h4 style={{ fontSize: '1.3rem', marginBottom: '15px', color: 'var(--primary)' }}>Governing Committee</h4>
-              <p>The Regional Research and Development Coordinating Committee (RRDCC) serves as the policy-making body, composed of the presidents and directors of the 28 member institutions.</p>
+          <div className="org-structure-wrapper slide-up">
+            {/* Left side: Interactive tree */}
+            <div className="org-tree-panel">
+              <div className="org-tree-root">
+                <button
+                  className={`org-node rrdcc-node ${activeNode === 'rrdcc' ? 'active' : ''}`}
+                  onClick={() => setActiveNode('rrdcc')}
+                >
+                  <span className="node-acronym">RRDCC</span>
+                  <span className="node-title">Regional R&D Coordinating Committee</span>
+                </button>
+              </div>
+
+              <div className="org-tree-middle">
+                <div className="org-tree-tac">
+                  <button
+                    className={`org-node tac-node ${activeNode === 'tac' ? 'active' : ''}`}
+                    onClick={() => setActiveNode('tac')}
+                  >
+                    <span className="node-acronym">TAC</span>
+                    <span className="node-title">Technical Advisory Committee</span>
+                  </button>
+                </div>
+                <div className="org-tree-secretariat">
+                  <button
+                    className={`org-node secretariat-node ${activeNode === 'secretariat' ? 'active' : ''}`}
+                    onClick={() => setActiveNode('secretariat')}
+                  >
+                    <span className="node-acronym">Secretariat</span>
+                    <span className="node-title">Consortium Secretariat</span>
+                  </button>
+                </div>
+              </div>
+
+              <div className="org-tree-clusters">
+                <button
+                  className={`org-node cluster-node rdcc-node ${activeNode === 'rdcc' ? 'active' : ''}`}
+                  onClick={() => setActiveNode('rdcc')}
+                >
+                  <span className="node-acronym">RDCC</span>
+                  <span className="node-title">R&D Cluster</span>
+                </button>
+                <button
+                  className={`org-node cluster-node ttcc-node ${activeNode === 'ttcc' ? 'active' : ''}`}
+                  onClick={() => setActiveNode('ttcc')}
+                >
+                  <span className="node-acronym">TTCC</span>
+                  <span className="node-title">Tech Transfer Cluster</span>
+                </button>
+                <button
+                  className={`org-node cluster-node kmcc-node ${activeNode === 'kmcc' ? 'active' : ''}`}
+                  onClick={() => setActiveNode('kmcc')}
+                >
+                  <span className="node-acronym">KMCC / ICT</span>
+                  <span className="node-title">Knowledge Management / ICT</span>
+                </button>
+              </div>
             </div>
 
-            <div class="vm-card slide-up" style={{ width: '100%', borderTopColor: 'var(--secondary)' }}>
-              <h4 style={{ fontSize: '1.3rem', marginBottom: '15px', color: 'var(--secondary)' }}>Consortium Secretariat</h4>
-              <p>Led by the Consortium Director and hosted at WVSU, the secretariat implements programs, monitors regional research initiatives, and handles communications.</p>
-            </div>
+            {/* Right side: Detail Panel */}
+            <div className="org-detail-panel">
+              {activeNode === 'rrdcc' && (
+                <div className="detail-card border-primary fade-in">
+                  <span className="detail-badge bg-primary">Governing Body</span>
+                  <h3>Regional Research & Development Coordinating Committee</h3>
+                  <div className="detail-leadership">
+                    <strong>Chairperson:</strong> Dr. Raul F. Muyong
+                  </div>
+                  <p className="detail-desc">
+                    The RRDCC serves as the highest governing and policy-making arm of WESVAARRDEC. It ensures that regional research programs align with national and local goals.
+                  </p>
+                  <div className="detail-section">
+                    <strong>Composition:</strong>
+                    <p>Presidents of member State Universities & Colleges (SUCs), directors of regional government line agencies (DOST, DA, DENR, BFAR, NEDA), and heads of private HEIs and intergovernmental organizations in Region VI.</p>
+                  </div>
+                  <div className="detail-section">
+                    <strong>Key Functions:</strong>
+                    <ul>
+                      <li>Formulate policies, rules, and guidelines governing consortium operations.</li>
+                      <li>Review and approve the consortium’s long-term and short-term R&D plans, budgets, and programs.</li>
+                      <li>Endorse regional Science & Technology (S&T) proposals to DOST-PCAARRD and other funding agencies.</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
 
-            <div class="vm-card slide-up" style={{ width: '100%', borderTopColor: 'var(--accent)' }}>
-              <h4 style={{ fontSize: '1.3rem', marginBottom: '15px', color: 'var(--accent-dark)' }}>R&D Working Groups</h4>
-              <p>Technical advisory committees in Agriculture, Aquatic, and Natural Resources. They review, evaluate, and assist in regional collaborative projects.</p>
+              {activeNode === 'tac' && (
+                <div className="detail-card border-secondary fade-in">
+                  <span className="detail-badge bg-secondary">Scientific Advisory</span>
+                  <h3>Technical Advisory Committee</h3>
+                  <div className="detail-leadership">
+                    <strong>Leadership:</strong> RRDCC-Appointed Chairs & Research Directors
+                  </div>
+                  <p className="detail-desc">
+                    The TAC serves as the technical review board of the consortium, advising the RRDCC on research priorities and technical aspects of regional projects.
+                  </p>
+                  <div className="detail-section">
+                    <strong>Composition:</strong>
+                    <p>Heads of Research or R&D divisions from the 28 member universities, agencies, and institutions.</p>
+                  </div>
+                  <div className="detail-section">
+                    <strong>Key Functions:</strong>
+                    <ul>
+                      <li>Provide technical guidance and review project proposals before submitting to the RRDCC.</li>
+                      <li>Review, evaluate, and prioritize regional R&D agenda and programs.</li>
+                      <li>Coordinate collaborative projects and capacity development among member agencies.</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {activeNode === 'secretariat' && (
+                <div className="detail-card border-primary fade-in">
+                  <span className="detail-badge bg-primary">Executive Office</span>
+                  <h3>Consortium Secretariat</h3>
+                  <div className="detail-leadership">
+                    <strong>Consortium Director:</strong> Dr. Pastor Jones T. Denusta
+                  </div>
+                  <p className="detail-desc">
+                    The Secretariat is the administrative and operational heart of WESVAARRDEC, responsible for coordinating the daily operations and executing consortium plans.
+                  </p>
+                  <div className="detail-section">
+                    <strong>Host Agency:</strong>
+                    <p>Hosted and based at West Visayas State University (WVSU) in Iloilo City, which serves as the base agency for managing regional resources.</p>
+                  </div>
+                  <div className="detail-section">
+                    <strong>Key Functions:</strong>
+                    <ul>
+                      <li>Manage day-to-day operations and implement plans approved by the RRDCC.</li>
+                      <li>Coordinate monitoring and evaluation (M&E) of ongoing and completed research programs.</li>
+                      <li>Facilitate communication and linkages between member institutions, PCAARRD, and the public.</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {activeNode === 'rdcc' && (
+                <div className="detail-card border-secondary fade-in">
+                  <span className="detail-badge bg-secondary">R&D Cluster</span>
+                  <h3>Research & Development Coordinating Committee</h3>
+                  <div className="detail-leadership">
+                    <strong>Leadership:</strong> Cluster Coordinator & SUC Research Heads
+                  </div>
+                  <p className="detail-desc">
+                    The RDCC coordinates and integrates scientific research programs in agriculture, aquatic resources, and forestry/natural resources across member institutions.
+                  </p>
+                  <div className="detail-section">
+                    <strong>Focus Areas:</strong>
+                    <p>Joint research on regional priority commodities (Darag Native Chicken, Guimaras Mango, Coconut, Muscovado, Sugarcane) and natural resource management.</p>
+                  </div>
+                  <div className="detail-section">
+                    <strong>Key Functions:</strong>
+                    <ul>
+                      <li>Identify regional R&D priorities and package collaborative research projects.</li>
+                      <li>Monitor and assess progress of PCAARRD-funded research projects.</li>
+                      <li>Standardize research methodologies and promote joint scientific investigations in Region VI.</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {activeNode === 'ttcc' && (
+                <div className="detail-card border-accent fade-in">
+                  <span className="detail-badge bg-accent" style={{ color: 'var(--text-dark)' }}>Technology Transfer</span>
+                  <h3>Technology Transfer Coordinating Committee</h3>
+                  <div className="detail-leadership">
+                    <strong>Leadership:</strong> Cluster Coordinator & Technology Managers
+                  </div>
+                  <p className="detail-desc">
+                    The TTCC bridges the gap between scientific research and commercial application, ensuring that regional innovations are actively transferred to end-users.
+                  </p>
+                  <div className="detail-section">
+                    <strong>Core Programs:</strong>
+                    <p>Manages regional Technology Business Incubators (ATBI), Intellectual Property Offices (IP-TBM), Farms and Industry Encounters (FIESTA), and municipal FITS centers.</p>
+                  </div>
+                  <div className="detail-section">
+                    <strong>Key Functions:</strong>
+                    <ul>
+                      <li>Accelerate the adoption of mature technologies by farmers, fisherfolk, and cooperatives.</li>
+                      <li>Protect intellectual property of member agencies and assist in commercialization of research.</li>
+                      <li>Coordinate training and extend scientific farming methodologies to communities.</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
+
+              {activeNode === 'kmcc' && (
+                <div className="detail-card border-accent fade-in">
+                  <span className="detail-badge bg-accent" style={{ color: 'var(--text-dark)' }}>Knowledge & ICT</span>
+                  <h3>Knowledge Management & ICT Committee</h3>
+                  <div className="detail-leadership">
+                    <strong>ICT Cluster Coordinator:</strong> Dr. Nikie Jo E. Deocampo
+                  </div>
+                  <p className="detail-desc">
+                    The KMCC/ICT cluster manages information systems, public relations, and communications, ensuring research findings are documented and accessible.
+                  </p>
+                  <div className="detail-section">
+                    <strong>Core Systems:</strong>
+                    <p>Consortium websites, digital repository portals, geographic mapping (GIS) databases, and online researcher directory databases.</p>
+                  </div>
+                  <div className="detail-section">
+                    <strong>Key Functions:</strong>
+                    <ul>
+                      <li>Manage the consortium's digital portals, databases, and geographic mapping (GIS) systems.</li>
+                      <li>Coordinate publication of research journals, technology bulletins, and news releases.</li>
+                      <li>Maintain public relations, social media channels, and manage online capability-building modules.</li>
+                    </ul>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
