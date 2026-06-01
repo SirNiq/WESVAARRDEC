@@ -10,7 +10,7 @@ export default function Rd() {
     if (hash) {
       // support #rd#tab-name or just #tab-name
       const cleanHash = hash.replace('#rd', '');
-      const match = ['tab-darag', 'tab-mango', 'tab-crab', 'tab-bamboo'].find(
+      const match = ['tab-darag', 'tab-mango', 'tab-coconut', 'tab-muscovado', 'tab-sugarcane'].find(
         (t) => '#' + t === cleanHash || t === cleanHash.replace('#', '')
       );
       if (match) {
@@ -61,7 +61,7 @@ export default function Rd() {
         <div className="container">
           <div className="section-header slide-up">
             <h2>Regional Commodity Priorities</h2>
-            <p>WESVAARRDEC focuses research and funding on commodities of high economic and ecological value in Western Visayas.</p>
+            <p>WESVAARRDEC focuses research and funding on priority commodities of high economic and agricultural value in Western Visayas.</p>
           </div>
 
           {/* Tab Buttons */}
@@ -79,20 +79,27 @@ export default function Rd() {
               Guimaras Mango
             </button>
             <button 
-              className={`commodity-tab-btn ${activeTab === 'tab-crab' ? 'active' : ''}`} 
-              onClick={() => handleTabClick('tab-crab')}
+              className={`commodity-tab-btn ${activeTab === 'tab-coconut' ? 'active' : ''}`} 
+              onClick={() => handleTabClick('tab-coconut')}
             >
-              Mud Crab
+              Coconut
             </button>
             <button 
-              className={`commodity-tab-btn ${activeTab === 'tab-bamboo' ? 'active' : ''}`} 
-              onClick={() => handleTabClick('tab-bamboo')}
+              className={`commodity-tab-btn ${activeTab === 'tab-muscovado' ? 'active' : ''}`} 
+              onClick={() => handleTabClick('tab-muscovado')}
             >
-              Bamboo & Forestry
+              Muscovado
+            </button>
+            <button 
+              className={`commodity-tab-btn ${activeTab === 'tab-sugarcane' ? 'active' : ''}`} 
+              onClick={() => handleTabClick('tab-sugarcane')}
+            >
+              Sugarcane
             </button>
           </div>
 
           {/* Tab Panes */}
+          {/* Pane 1: Darag */}
           {activeTab === 'tab-darag' && (
             <div className="commodity-pane fade-in">
               <div className="commodity-content">
@@ -102,13 +109,14 @@ export default function Rd() {
                 <div className="commodity-details">
                   <h3>Darag Native Chicken</h3>
                   <p><strong>Lead Agency:</strong> West Visayas State University (WVSU)</p>
-                  <p>Darag (Gallus gallus domesticus) is the indigenous native chicken of Western Visayas, praised for its unique flavor, texture, and high market value. WESVAARRDEC drives research on standardizing breeding protocols, reducing chick mortality, establishing organic feeding guidelines, and assisting farmers in scaling production.</p>
+                  <p>Darag is the premier native chicken breed indigenous to Western Visayas, highly valued for its unique taste, leaner meat, and premium market pricing. R&D initiatives focus on standardizing breeding and rearing protocols, developing low-cost organic feed formulations from local materials, and improving survival rates in backyard farms.</p>
                   <a href="#contact" className="btn btn-primary">Inquire About This Research</a>
                 </div>
               </div>
             </div>
           )}
 
+          {/* Pane 2: Mango */}
           {activeTab === 'tab-mango' && (
             <div className="commodity-pane fade-in">
               <div className="commodity-content">
@@ -118,39 +126,58 @@ export default function Rd() {
                 <div className="commodity-details">
                   <h3>Guimaras Sweet Mango</h3>
                   <p><strong>Lead Agency:</strong> Guimaras State University / DA Region 6</p>
-                  <p>Guimaras mangoes are famous worldwide for their intense sweetness and fiber-free flesh. Our consortium coordinates scientific efforts on integrated pest management (IPM), flower induction regulation, post-harvest hot water treatment, and digital trace-back codes to guarantee product authenticity in export markets.</p>
+                  <p>Famous worldwide for its sweetness and texture, the Guimaras Mango is a key export commodity. WESVAARRDEC coordinates research on integrated pest management (IPM), tree rehabilitation protocols, hot water post-harvest treatments, and digital blockchain-based tagging to ensure quality and origin control.</p>
                   <a href="#contact" className="btn btn-primary">Inquire About This Research</a>
                 </div>
               </div>
             </div>
           )}
 
-          {activeTab === 'tab-crab' && (
+          {/* Pane 3: Coconut */}
+          {activeTab === 'tab-coconut' && (
             <div className="commodity-pane fade-in">
               <div className="commodity-content">
                 <div className="commodity-img">
-                  <img src="img/pillar_aquatic.png" alt="Mud Crab Aquaculture" />
+                  <img src="img/pillar_natural.png" alt="Coconut Plantations" />
                 </div>
                 <div className="commodity-details">
-                  <h3>Scylla serrata (Mud Crab)</h3>
-                  <p><strong>Lead Agency:</strong> SEAFDEC/AQD & Capiz State University</p>
-                  <p>Mud crab production is a primary income source for coastal communities in Capiz and Iloilo. WESVAARRDEC supports research in hatchery diets, disease prevention (preventing white spot syndrome), mangrove-friendly aquasilviculture methods, and soft-shell crab production protocols for local adoption.</p>
+                  <h3>Coconut R&D</h3>
+                  <p><strong>Lead Agency:</strong> Aklan State University / Philippine Coconut Authority (PCA)</p>
+                  <p>Coconut is a major source of livelihood across Aklan and Capiz. Consortium R&D projects focus on developing high-yielding hybrid varieties, soil management for multi-crop coco-farms, processing technologies for high-value Virgin Coconut Oil (VCO), and deploying sustainable pest control against the coconut scale insect.</p>
                   <a href="#contact" className="btn btn-primary">Inquire About This Research</a>
                 </div>
               </div>
             </div>
           )}
 
-          {activeTab === 'tab-bamboo' && (
+          {/* Pane 4: Muscovado */}
+          {activeTab === 'tab-muscovado' && (
             <div className="commodity-pane fade-in">
               <div className="commodity-content">
                 <div className="commodity-img">
-                  <img src="img/pillar_natural.png" alt="Bamboo Reforestation" />
+                  <img src="img/pillar_agriculture.png" alt="Muscovado Sugar Mill" />
                 </div>
                 <div className="commodity-details">
-                  <h3>Bamboo and Watershed Protection</h3>
-                  <p><strong>Lead Agency:</strong> Aklan State University / DENR Region 6</p>
-                  <p>Bamboo plays a dual role in Western Visayas: as a carbon-sequestering reforestation plant for critical watersheds and as a raw material for furniture and textiles. Our studies cover tissue culture micropropagation, preservative treatments, engineered bamboo design, and flood hazard mitigation mapping.</p>
+                  <h3>Organic Muscovado Sugar</h3>
+                  <p><strong>Lead Agency:</strong> University of Antique / Sugar Regulatory Administration</p>
+                  <p>Muscovado is an unrefined brown sugar produced using traditional evaporation processes, serving as a primary high-value agricultural product of Antique and Negros. Research focuses on optimizing processing sanitation, design of biomass-fired furnaces for processing mills, and organic certifications for smallholder cooperatives.</p>
+                  <a href="#contact" className="btn btn-primary">Inquire About This Research</a>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Pane 5: Sugarcane */}
+          {activeTab === 'tab-sugarcane' && (
+            <div className="commodity-pane fade-in">
+              <div className="commodity-content">
+                <div className="commodity-img">
+                  <img src="img/pillar_natural.png" alt="Sugarcane Fields" />
+                </div>
+                <div className="commodity-details">
+                  <h3>Sugarcane Production</h3>
+                  <p><strong>Lead Agency:</strong> Sugar Regulatory Administration / Carlos Hilado Memorial State U</p>
+                  <p>As the sugar bowl of the Philippines, Negros Occidental relies heavily on sugarcane farming. WESVAARRDEC drives sugarcane R&D toward developing climate-resilient cane varieties, mechanized harvest efficiency systems, automated soil health analyzers, and biological pest control controls.</p>
                   <a href="#contact" className="btn btn-primary">Inquire About This Research</a>
                 </div>
               </div>
@@ -183,10 +210,10 @@ export default function Rd() {
             <div className="tech-card slide-up">
               <div className="tech-banner"></div>
               <div className="tech-info">
-                <span className="tech-tag">Aquatic</span>
-                <h3>Aquasilviculture Mud Crab Nursery</h3>
-                <p>A mangrove-friendly enclosure rearing protocol that allows crab culture inside active wetlands without harming coastal forests. Promotes ecological harmony and high crab survival.</p>
-                <div className="tech-institution">Developed by: SEAFDEC/AQD & Capiz State U</div>
+                <span className="tech-tag">Agriculture</span>
+                <h3>Sweet Mango Quality Classifier</h3>
+                <p>A portable near-infrared spectrometer application that assesses mango ripeness and sugar levels non-destructively, optimizing classification for premium export markets.</p>
+                <div className="tech-institution">Developed by: Guimaras State University</div>
               </div>
             </div>
 
@@ -194,10 +221,10 @@ export default function Rd() {
             <div className="tech-card slide-up">
               <div className="tech-banner"></div>
               <div className="tech-info">
-                <span className="tech-tag">Natural Resources</span>
-                <h3>Bamboo Preservation and Seasoning</h3>
-                <p>An eco-friendly chemical curing and treatment technique that increases bamboo cane durability against wood borers (bukbok) by up to 300%, enabling high-grade furniture use.</p>
-                <div className="tech-institution">Developed by: Aklan State University</div>
+                <span className="tech-tag">Agriculture</span>
+                <h3>Clean-Fuel Muscovado Furnace</h3>
+                <p>An engineered biomass furnace design for muscovado processing mills. Increases heating efficiency by 40% while eliminating toxic smoke particles, improving product sanitation.</p>
+                <div className="tech-institution">Developed by: University of Antique</div>
               </div>
             </div>
 
@@ -206,9 +233,9 @@ export default function Rd() {
               <div className="tech-banner"></div>
               <div className="tech-info">
                 <span className="tech-tag">Agriculture</span>
-                <h3>Sweet Mango Quality Classifier</h3>
-                <p>A portable near-infrared spectrometer application that assesses mango ripeness and sugar levels non-destructively, optimizing classification for premium export markets.</p>
-                <div className="tech-institution">Developed by: Guimaras State University</div>
+                <h3>Sugarcane Precision Fertilizer Map</h3>
+                <p>A soil-mapping GIS application that analyzes field NPK levels and prescribes precise fertilizer volumes, reducing chemical input costs for sugar farmers by 30%.</p>
+                <div className="tech-institution">Developed by: CHMSU & SRA</div>
               </div>
             </div>
 
@@ -216,9 +243,9 @@ export default function Rd() {
             <div className="tech-card slide-up">
               <div className="tech-banner"></div>
               <div className="tech-info">
-                <span class="tech-tag">Agriculture</span>
+                <span className="tech-tag">Agriculture</span>
                 <h3>Microbial Organic Soil Stimulant</h3>
-                <p>An organic inoculant that speeds up organic matter decomposition and releases essential nitrogen/phosphorus. Restores degraded soil quality and increases rice harvests.</p>
+                <p>An organic inoculant that speeds up organic matter decomposition and releases essential nitrogen/phosphorus. Restores degraded soil quality and increases rice and sugarcane harvests.</p>
                 <div className="tech-institution">Developed by: Central Philippine State U</div>
               </div>
             </div>
@@ -227,10 +254,10 @@ export default function Rd() {
             <div className="tech-card slide-up">
               <div className="tech-banner"></div>
               <div className="tech-info">
-                <span class="tech-tag">Aquatic</span>
-                <h3>Green Shellfish Purification System</h3>
-                <p>A recirculating water system utilizing UV sterilization to cleanse harvested mussels and oysters from impurities. Assures food safety standards for commercial restaurants.</p>
-                <div className="tech-institution">Developed by: ISUST (Iloilo State U)</div>
+                <span className="tech-tag">Agriculture</span>
+                <h3>Coconut Hybrid Nursery Propagation</h3>
+                <p>A high-speed plant propagation protocol for high-yielding dwarf hybrid coconuts, speeding up seedling maturation by 2 months for faster farm deployment.</p>
+                <div className="tech-institution">Developed by: Aklan State University</div>
               </div>
             </div>
           </div>

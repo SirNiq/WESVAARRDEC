@@ -107,6 +107,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Priority Commodities Bar */}
+      <section className="container" style={{ marginTop: '20px', position: 'relative', zIndex: 90 }}>
+        <div style={{
+          backgroundColor: '#ffffff',
+          borderRadius: 'var(--border-radius-sm)',
+          padding: '15px 30px',
+          boxShadow: 'var(--shadow-sm)',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '20px',
+          borderLeft: '5px solid var(--accent)',
+          flexWrap: 'wrap'
+        }} className="slide-up">
+          <span style={{ fontFamily: 'Outfit', fontWeight: 700, textTransform: 'uppercase', fontSize: '0.9rem', color: 'var(--primary)' }}>
+            Priority Commodities:
+          </span>
+          <div style={{ display: 'flex', gap: '10px 15px', flexWrap: 'wrap', fontSize: '0.95rem', fontWeight: 600 }}>
+            <a href="#rd#tab-darag" style={{ color: 'var(--text-muted)' }}>Darag Chicken</a>
+            <span style={{ color: 'rgba(21, 94, 55, 0.2)' }}>|</span>
+            <a href="#rd#tab-mango" style={{ color: 'var(--text-muted)' }}>Guimaras Mango</a>
+            <span style={{ color: 'rgba(21, 94, 55, 0.2)' }}>|</span>
+            <a href="#rd#tab-coconut" style={{ color: 'var(--text-muted)' }}>Coconut</a>
+            <span style={{ color: 'rgba(21, 94, 55, 0.2)' }}>|</span>
+            <a href="#rd#tab-muscovado" style={{ color: 'var(--text-muted)' }}>Muscovado</a>
+            <span style={{ color: 'rgba(21, 94, 55, 0.2)' }}>|</span>
+            <a href="#rd#tab-sugarcane" style={{ color: 'var(--text-muted)' }}>Sugarcane</a>
+          </div>
+        </div>
+      </section>
+
       {/* Core Sectors */}
       <section className="section-padding pillars-section" id="pillars">
         <div className="container">
@@ -146,7 +177,7 @@ export default function Home() {
               <div className="pillar-info">
                 <h3>Aquatic Resources</h3>
                 <p>Sustaining marine, brackish, and inland fisheries. We support mud crab aquaculture, shellfish cultivation, and biodiversity mapping in Western Visayas' rich marine habitats.</p>
-                <a href="#rd#tab-crab" className="read-more">Learn More &rarr;</a>
+                <a href="#rd#tab-mango" className="read-more">Learn More &rarr;</a>
               </div>
             </div>
 
@@ -163,7 +194,7 @@ export default function Home() {
               <div className="pillar-info">
                 <h3>Natural Resources</h3>
                 <p>Preserving regional ecosystems through watershed management, bamboo reforestation programs, climate vulnerability assessments, and biodiversity conservation policies.</p>
-                <a href="#rd#tab-bamboo" className="read-more">Learn More &rarr;</a>
+                <a href="#rd#tab-coconut" className="read-more">Learn More &rarr;</a>
               </div>
             </div>
           </div>

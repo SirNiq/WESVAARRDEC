@@ -1235,9 +1235,15 @@ ul {
    ========================================================================== */
 .commodity-tabs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 15px;
   margin-bottom: 40px;
+}
+
+@media (max-width: 992px) {
+  .commodity-tabs {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .commodity-tab-btn {
@@ -1291,7 +1297,7 @@ ul {
   margin-bottom: 25px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .commodity-tabs {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1874,6 +1880,17 @@ textarea.form-control {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-up.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+  .brand-subtitle {
+    display: none;
+  }
 }
 
 .slide-up.appear {

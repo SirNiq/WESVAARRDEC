@@ -34,9 +34,9 @@ export default function Header({ currentHash }) {
       <div className="container header-container">
         <a href="#home" className="logo-link">
           <img src="img/logo.png" alt="WESVAARRDEC Logo" />
-          <div class="brand-text">
+          <div className="brand-text">
             <span className="brand-title">WESVAARRDEC</span>
-            <span className="brand-subtitle">Western Visayas AANR Consortium</span>
+            <span className="brand-subtitle">Western Visayas Agriculture, Aquatic and Natural Resources Research and Development Consortium</span>
           </div>
         </a>
 
