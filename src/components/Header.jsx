@@ -31,40 +31,49 @@ export default function Header({ currentHash }) {
 
   return (
     <header className={`main-header ${scrolled ? 'scrolled' : ''}`}>
-      <div className="container header-container">
-        <a href="#home" className="logo-link">
-          <img src="img/logo.png" alt="WESVAARRDEC Logo" />
-          <div className="brand-text">
-            <span className="brand-title">WESVAARRDEC</span>
-            <span className="brand-subtitle">Western Visayas Agriculture, Aquatic and Natural Resources Research and Development Consortium</span>
-          </div>
-        </a>
+      <div className="header-top-bar">
+        <div className="container top-bar-container">
+          <span className="full-consortium-name">
+            Western Visayas Agriculture, Aquatic and Natural Resources Research and Development Consortium
+          </span>
+        </div>
+      </div>
+      
+      <div className="header-main-bar">
+        <div className="container main-bar-container">
+          <a href="#home" className="logo-link">
+            <img src="img/logo.png" alt="WESVAARRDEC Logo" />
+            <div className="brand-text">
+              <span className="brand-title">WESVAARRDEC</span>
+            </div>
+          </a>
 
-        <button 
-          className={`nav-toggle ${mobileActive ? 'active' : ''}`} 
-          onClick={() => setMobileActive(!mobileActive)}
-          aria-label="Toggle navigation"
-        >
-          <span className="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-          <span class="hamburger-line"></span>
-        </button>
+          <button 
+            className={`nav-toggle ${mobileActive ? 'active' : ''}`} 
+            onClick={() => setMobileActive(!mobileActive)}
+            aria-label="Toggle navigation"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
 
-        <nav className={`main-nav ${mobileActive ? 'active' : ''}`}>
-          {navItems.map((item) => {
-            const isActive = currentHash === item.hash || (currentHash === '' && item.hash === '#home');
-            return (
-              <a
-                key={item.hash}
-                href={item.hash}
-                className={`nav-link ${isActive ? 'active' : ''}`}
-                onClick={handleLinkClick}
-              >
-                {item.label}
-              </a>
-            );
-          })}
-        </nav>
+          <nav className={`main-nav ${mobileActive ? 'active' : ''}`}>
+            {navItems.map((item) => {
+              const isActive = currentHash === item.hash || (currentHash === '' && item.hash === '#home');
+              return (
+                <a
+                  key={item.hash}
+                  href={item.hash}
+                  className={`nav-link ${isActive ? 'active' : ''}`}
+                  onClick={handleLinkClick}
+                >
+                  {item.label}
+                </a>
+              );
+            })}
+          </nav>
+        </div>
       </div>
     </header>
   );
