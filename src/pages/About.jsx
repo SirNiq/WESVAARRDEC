@@ -298,32 +298,32 @@ export default function About() {
             <h3>Government Departments and Research Agencies</h3>
             <div className="directory-grid">
               <div className="directory-card gov">
-                <span class="acronym">DA R6</span>
+                <span className="acronym">DA R6</span>
                 <h4>Department of Agriculture - Region VI</h4>
                 <p>Provides regulatory support, funding, and agricultural extensions for farmers in Region VI.</p>
               </div>
               <div className="directory-card gov">
-                <span class="acronym">DOST R6</span>
+                <span className="acronym">DOST R6</span>
                 <h4>Department of Science and Technology - Region VI</h4>
                 <p>Provides key funding, scientific oversight, and sets the regional S&T priorities.</p>
               </div>
               <div className="directory-card gov">
-                <span class="acronym">BFAR R6</span>
+                <span className="acronym">BFAR R6</span>
                 <h4>Bureau of Fisheries and Aquatic Resources - Region VI</h4>
                 <p>Drives aquatic resource conservation, licensing, and fish farming training support.</p>
               </div>
               <div className="directory-card gov">
-                <span class="acronym">DENR R6</span>
+                <span className="acronym">DENR R6</span>
                 <h4>Dept. of Environment & Natural Resources - Region VI</h4>
                 <p>Manages forestry, protected areas, and watershed conservation research.</p>
               </div>
               <div className="directory-card gov">
-                <span class="acronym">NEDA R6</span>
+                <span className="acronym">NEDA R6</span>
                 <h4>National Economic and Development Authority - Region VI</h4>
                 <p>Ensures that R&D targets align with Western Visayas' long-term socioeconomic plans.</p>
               </div>
               <div className="directory-card gov">
-                <span class="acronym">DA-ATI R6</span>
+                <span className="acronym">DA-ATI R6</span>
                 <h4>DA - Agricultural Training Institute - Region VI</h4>
                 <p>Conducts capability training programs, manages FITS centers, and helps farmers adapt tech.</p>
               </div>
@@ -335,17 +335,17 @@ export default function About() {
             <h3>Private HEIs and Intergovernmental Organizations</h3>
             <div className="directory-grid">
               <div className="directory-card hei">
-                <span class="acronym">CPU</span>
+                <span className="acronym">CPU</span>
                 <h4>Central Philippine University</h4>
                 <p>Private university driving research in agricultural engineering and biotechnology.</p>
               </div>
               <div className="directory-card hei">
-                <span class="acronym">USA</span>
+                <span className="acronym">USA</span>
                 <h4>University of San Agustin</h4>
                 <p>Highly regarded for natural products research and pharmacology drug-discovery programs.</p>
               </div>
               <div className="directory-card hei">
-                <span class="acronym">SEAFDEC/AQD</span>
+                <span className="acronym">SEAFDEC/AQD</span>
                 <h4>Southeast Asian Fisheries Development Center</h4>
                 <p>International institution based in Tigbauan, Iloilo. World leader in aquaculture R&D.</p>
               </div>
