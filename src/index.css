@@ -2253,4 +2253,119 @@ textarea.form-control {
   }
 }
 
+/* Member Profile Cards */
+.member-profile-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.member-profile-list.staff-list {
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.member-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: var(--bg-main);
+  padding: 12px 18px;
+  border-radius: var(--border-radius-sm);
+  border-left: 4px solid var(--primary);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast);
+}
+
+.member-profile-card.staff {
+  border-left-color: var(--text-muted);
+  padding: 10px 14px;
+}
+
+.member-profile-card:hover {
+  transform: translateX(4px);
+}
+
+.detail-card.border-secondary .member-profile-card {
+  border-left-color: var(--secondary);
+}
+
+.detail-card.border-accent .member-profile-card {
+  border-left-color: var(--accent);
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.member-profile-card.staff .profile-avatar {
+  width: 38px;
+  height: 38px;
+  font-size: 0.95rem;
+}
+
+/* Gradients for avatars */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-light) 100%);
+}
+
+.bg-gradient-accent {
+  background: linear-gradient(135deg, var(--accent-dark) 0%, var(--accent) 100%);
+  color: var(--text-dark) !important;
+}
+
+.bg-gradient-gray {
+  background: linear-gradient(135deg, var(--text-muted) 0%, #9cb3a5 100%);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.2;
+}
+
+.member-profile-card.staff .profile-name {
+  font-size: 0.92rem;
+}
+
+.profile-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+.member-profile-card.staff .profile-role {
+  font-size: 0.72rem;
+  text-transform: none;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
 /* End of Styles */

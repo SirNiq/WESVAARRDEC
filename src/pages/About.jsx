@@ -181,9 +181,25 @@ export default function About() {
                 <div className="detail-card border-primary fade-in">
                   <span className="detail-badge bg-primary">Governing Body</span>
                   <h3>Regional Research & Development Coordinating Committee</h3>
-                  <div className="detail-leadership">
-                    <strong>Chairperson:</strong> Dr. Raul F. Muyong
+                  
+                  <div className="member-profile-list">
+                    <div className="member-profile-card">
+                      <div className="profile-avatar bg-gradient-primary">BG</div>
+                      <div className="profile-info">
+                        <span className="profile-name">DR. BOBBY D. GERARDO</span>
+                        <span className="profile-role">RRDCC Chairperson</span>
+                      </div>
+                    </div>
+
+                    <div className="member-profile-card">
+                      <div className="profile-avatar bg-gradient-primary">AM</div>
+                      <div className="profile-info">
+                        <span className="profile-name">DR. ALADINO C. MORACA</span>
+                        <span className="profile-role">RRDCC Vice Chairperson</span>
+                      </div>
+                    </div>
                   </div>
+
                   <p className="detail-desc">
                     The RRDCC serves as the highest governing and policy-making arm of WESVAARRDEC. It ensures that regional research programs align with national and local goals.
                   </p>
@@ -195,7 +211,7 @@ export default function About() {
                     <strong>Key Functions:</strong>
                     <ul>
                       <li>Formulate policies, rules, and guidelines governing consortium operations.</li>
-                      <li>Review and approve the consortium’s long-term and short-term R&D plans, budgets, and programs.</li>
+                      <li>Review and approve the consortium’s plans, budgets, and programs.</li>
                       <li>Endorse regional Science & Technology (S&T) proposals to DOST-PCAARRD and other funding agencies.</li>
                     </ul>
                   </div>
@@ -206,8 +222,8 @@ export default function About() {
                 <div className="detail-card border-secondary fade-in">
                   <span className="detail-badge bg-secondary">Scientific Advisory</span>
                   <h3>Technical Advisory Committee</h3>
-                  <div className="detail-leadership">
-                    <strong>Leadership:</strong> RRDCC-Appointed Chairs & Research Directors
+                  <div className="detail-leadership-general">
+                    <strong>TAC Composition:</strong> RRDCC-Appointed Chairs & SUC Research Directors
                   </div>
                   <p className="detail-desc">
                     The TAC serves as the technical review board of the consortium, advising the RRDCC on research priorities and technical aspects of regional projects.
@@ -231,23 +247,51 @@ export default function About() {
                 <div className="detail-card border-primary fade-in">
                   <span className="detail-badge bg-primary">Executive Office</span>
                   <h3>Consortium Secretariat</h3>
-                  <div className="detail-leadership">
-                    <strong>Consortium Director:</strong> Dr. Pastor Jones T. Denusta
+                  
+                  <div className="member-profile-list">
+                    <div className="member-profile-card">
+                      <div className="profile-avatar bg-gradient-primary">PD</div>
+                      <div className="profile-info">
+                        <span className="profile-name">DR. PASTOR JONES T. DENUSTA</span>
+                        <span className="profile-role">Consortium Director</span>
+                      </div>
+                    </div>
                   </div>
+
                   <p className="detail-desc">
                     The Secretariat is the administrative and operational heart of WESVAARRDEC, responsible for coordinating the daily operations and executing consortium plans.
                   </p>
+                  
+                  <div className="detail-section">
+                    <strong>Support & Administrative Staff:</strong>
+                    <div className="member-profile-list staff-list">
+                      <div className="member-profile-card staff">
+                        <div className="profile-avatar bg-gradient-gray">JC</div>
+                        <div className="profile-info">
+                          <span className="profile-name">MS. JYLYN V. CORNELIO</span>
+                          <span className="profile-role">Project Technical Aide VI</span>
+                        </div>
+                      </div>
+                      <div className="member-profile-card staff">
+                        <div className="profile-avatar bg-gradient-gray">NM</div>
+                        <div className="profile-info">
+                          <span className="profile-name">MS. NICOLE FRANZEEN F. MALLARE</span>
+                          <span className="profile-role">Administrative Staff</span>
+                        </div>
+                      </div>
+                      <div className="member-profile-card staff">
+                        <div className="profile-avatar bg-gradient-gray">CT</div>
+                        <div className="profile-info">
+                          <span className="profile-name">MS. CYNTHIA A. TORLAO</span>
+                          <span className="profile-role">Project Administrative Aide III</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
                   <div className="detail-section">
                     <strong>Host Agency:</strong>
                     <p>Hosted and based at West Visayas State University (WVSU) in Iloilo City, which serves as the base agency for managing regional resources.</p>
-                  </div>
-                  <div className="detail-section">
-                    <strong>Key Functions:</strong>
-                    <ul>
-                      <li>Manage day-to-day operations and implement plans approved by the RRDCC.</li>
-                      <li>Coordinate monitoring and evaluation (M&E) of ongoing and completed research programs.</li>
-                      <li>Facilitate communication and linkages between member institutions, PCAARRD, and the public.</li>
-                    </ul>
                   </div>
                 </div>
               )}
@@ -256,9 +300,17 @@ export default function About() {
                 <div className="detail-card border-secondary fade-in">
                   <span className="detail-badge bg-secondary">R&D Cluster</span>
                   <h3>Research & Development Coordinating Committee</h3>
-                  <div className="detail-leadership">
-                    <strong>Leadership:</strong> Cluster Coordinator & SUC Research Heads
+                  
+                  <div className="member-profile-list">
+                    <div className="member-profile-card">
+                      <div className="profile-avatar bg-gradient-secondary">MI</div>
+                      <div className="profile-info">
+                        <span className="profile-name">DR. MICHAEL T. IBISATE</span>
+                        <span className="profile-role">Research & Development Cluster Coordinator</span>
+                      </div>
+                    </div>
                   </div>
+
                   <p className="detail-desc">
                     The RDCC coordinates and integrates scientific research programs in agriculture, aquatic resources, and forestry/natural resources across member institutions.
                   </p>
@@ -271,7 +323,7 @@ export default function About() {
                     <ul>
                       <li>Identify regional R&D priorities and package collaborative research projects.</li>
                       <li>Monitor and assess progress of PCAARRD-funded research projects.</li>
-                      <li>Standardize research methodologies and promote joint scientific investigations in Region VI.</li>
+                      <li>Standardize research methodologies and promote joint scientific investigations.</li>
                     </ul>
                   </div>
                 </div>
@@ -281,9 +333,17 @@ export default function About() {
                 <div className="detail-card border-accent fade-in">
                   <span className="detail-badge bg-accent" style={{ color: 'var(--text-dark)' }}>Technology Transfer</span>
                   <h3>Technology Transfer Coordinating Committee</h3>
-                  <div className="detail-leadership">
-                    <strong>Leadership:</strong> Cluster Coordinator & Technology Managers
+                  
+                  <div className="member-profile-list">
+                    <div className="member-profile-card">
+                      <div className="profile-avatar bg-gradient-accent">HG</div>
+                      <div className="profile-info">
+                        <span className="profile-name">DR. HELEN G. GENANDOY</span>
+                        <span className="profile-role">Technology Transfer Cluster Coordinator</span>
+                      </div>
+                    </div>
                   </div>
+
                   <p className="detail-desc">
                     The TTCC bridges the gap between scientific research and commercial application, ensuring that regional innovations are actively transferred to end-users.
                   </p>
@@ -306,9 +366,25 @@ export default function About() {
                 <div className="detail-card border-accent fade-in">
                   <span className="detail-badge bg-accent" style={{ color: 'var(--text-dark)' }}>Knowledge & ICT</span>
                   <h3>Knowledge Management & ICT Committee</h3>
-                  <div className="detail-leadership">
-                    <strong>ICT Cluster Coordinator:</strong> Dr. Nikie Jo E. Deocampo
+                  
+                  <div className="member-profile-list">
+                    <div className="member-profile-card">
+                      <div className="profile-avatar bg-gradient-accent">IE</div>
+                      <div className="profile-info">
+                        <span className="profile-name">DR. IAN C. ESPADA</span>
+                        <span className="profile-role">Science Communication Cluster Coordinator</span>
+                      </div>
+                    </div>
+
+                    <div className="member-profile-card">
+                      <div className="profile-avatar bg-gradient-accent">ND</div>
+                      <div className="profile-info">
+                        <span className="profile-name">DR. NIKIE JO E. DEOCAMPO</span>
+                        <span className="profile-role">ICT Cluster Coordinator</span>
+                      </div>
+                    </div>
                   </div>
+
                   <p className="detail-desc">
                     The KMCC/ICT cluster manages information systems, public relations, and communications, ensuring research findings are documented and accessible.
                   </p>
